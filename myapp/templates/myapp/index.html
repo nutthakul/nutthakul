@@ -1,59 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="django form with utf-8">
-    <meta name="author" content="wichit2s">
-    <title>Linux Services</title>
-
-    {% load static %}
-    <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
-
-    <style>
-      .filled {
-        width: 80%;
-        padding: 5px;
-      }
-      .spacing {
-        padding: 1em;
-      }
-    </style>
+    <title>Hello!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   </head>
   <body>
-    <nav> <h1> Nutthakul Page </h1> </nav>
-    <div>
-      <section class="filled">
-        <form action="index" method="POST" enctype="multipart/form-data;charset=UTF-8">
-          {% csrf_token %}
-          <div class="spacing"><input class="filled" type="text" name="icon" value="แล้วแต่"/></div>
-          <div class="spacing"><input class="filled" type="text" name="title" value="ใส่อะไรก็ได้ "/></div>
-          <div class="spacing"><input class="filled" type="text" name="detail" value="detail รายละเอียด"/></div>
-          <div class="spacing"><button style="padding: 2em;" type="submit">Submit</button></div>
-        </form>
-      </section>
-      <div>
-       <table style="width:80%; border: 1px solid black; padding: 1em;">
-        <tr>
-          <th>Icon</th>
-          <th>Title</th>
-          <th>Detail</th>
-        </tr>
-        {% for s in services %}
-        <tr>
-          <td> <i class="fa {{s.icon}}"></i> {{ s.icon }}</td>
-          <td>{{ s.title }}</td>
-          <td>{{ s.detail }}</td>
-        </tr>
-        {% endfor %}
-      </table> 
+    <div class="container">
+      <div class="jumbotron">
+        <h1>ขอคะแนนเยอะๆนะครับอาจารย์</h1>
+        <p><a href="insert"  class="btn btn-primary">กรอกข้อมูล</a></p>
+        
+        <img src="https://lungtumaleaw.com/uploads/posts/972_0_20180709112002.jpg" style="width:640px;height:660px">
+        <h5>picture by <a href="https://superninjadeluxe.deviantart.com/art/Django-564499014">superninjadeluxe - DeviantArt</a></h5>
       </div>
     </div>
-    <footer>
-      <div>
-        <div>Copyright &copy; 4019 </div>
-      </div>
-    </footer>
-  </body>
 
+  </body>
 </html>
